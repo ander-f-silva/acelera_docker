@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.fullcycle</groupId>
-	<artifactId>modules-course</artifactId>
+	<artifactId>module-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>modules-course</name>
-	<description>Project to docker </description>
+	<name>module-api</name>
+	<description>Project to pfa </description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
