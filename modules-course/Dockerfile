@@ -1,7 +1,12 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11.0.11-jre
+
 ARG JAR_FILE=target/*.jar
-ARG DB_USERNAME=root
-ARG DB_PASSWORD=root
-ARG DB_CONNECTION=jdbc:mysql://localhost:3306/module-db?useSSL=false&useUnicode=true&characterEncoding=utf-8
+
+ENV DB_USERNAME=user
+ENV DB_PASSWORD=password
+ENV DB_HOST=localhost
+ENV DB_PORT=3306
+ENV DB_DATABASE=database
+
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
