@@ -10,5 +10,5 @@ ENV DB_DATABASE=database
 
 EXPOSE 3000
 
-COPY ${JAR_FILE} app.jar
+COPY ${JAR_FILE} app.jarg
 ENTRYPOINT ["java","-jar","/app.jar"]
