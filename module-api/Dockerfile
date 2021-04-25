@@ -8,5 +8,7 @@ ENV DB_HOST=localhost
 ENV DB_PORT=3306
 ENV DB_DATABASE=database
 
+EXPOSE 3000
+
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
