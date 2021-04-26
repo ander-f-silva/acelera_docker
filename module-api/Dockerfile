@@ -5,6 +5,6 @@ ENV DB_PASSWORD=password
 ENV DB_HOST=localhost
 ENV DB_PORT=3306
 ENV DB_DATABASE=database
-COPY ${JAR_FILE} app.jarg
+COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
-EXPOSE 3000/tcp
+EXPOSE 3000 3000
