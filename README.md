@@ -85,3 +85,6 @@ ou
 curl -X GET http://localhost:8080/modules
 ````
 
+#### Note
+
+A aplicações estão nos repositórios do docker hub, neste caso não precisa criar as imagens com base no código.
