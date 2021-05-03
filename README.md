@@ -31,7 +31,7 @@ Utilizei o banco de dados MySQL rodando na porta 3306.
 
 ## Instalação (atualização)
 
-### Instalaçãom com Docker Commpose
+### Instalação com Docker Commpose
 
 Faça o clone do projeto para a pasta desejada usando o comando git clone 
 
@@ -47,7 +47,7 @@ docker-compouse up -d
 
 **Note**: Não precisa fazer o build das imagens, pois as images do proxy reverso e da aplicação foram alteradas para ficar mais flexivel.
 
-### Instalaçãom com Docker 
+### Instalação com Docker 
 
 - Primeiro criar a reder:
 
