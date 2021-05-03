@@ -22,9 +22,32 @@ Utilizo o Nginx aponta para porta 80 e externamente para 8080.
 
 Utilizei o banco de dados MySQL rodando na porta 3306.
 
-## Instalação
+**Note**: Foi removido a criação do banco pela aplicação e agora esta configurada para docker compose.
 
-### Baixando os projetos pelo docker hub
+### Container (atualização)
+
+- Docker;
+- Docker Composer (novo).
+
+## Instalação (atualização)
+
+### Instalação com Docker Commpose
+
+Faça o clone do projeto para a pasta desejada usando o comando git clone 
+
+````
+git clone https://github.com/ander-f-silva/pfa-docker.git
+````
+
+Este passo é necessario por que o script de inicializa a base esta no processo de subir o Mysql.
+
+````
+docker-compouse up -d
+````
+
+**Note**: Não precisa fazer o build das imagens, pois as images do proxy reverso e da aplicação foram alteradas para ficar mais flexivel.
+
+### Instalação com Docker 
 
 - Primeiro criar a reder:
 
@@ -85,6 +108,4 @@ ou
 curl -X GET http://localhost:8080/modules
 ````
 
-#### Note
-
-A aplicações estão nos repositórios do docker hub, neste caso não precisa criar as imagens com base no código.
+**Note**: A aplicações estão nos repositórios do docker hub, neste caso não precisa criar as imagens com base no código.
