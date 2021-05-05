@@ -31,7 +31,7 @@ services:
     image: andersonfsilva/web-proxy:latest
     ports: 
       - 8000:80
-    entrypoint: dockerize -wait http://application:333 -timeout 10s
+    entrypoint: dockerize -wait http://application:3333 -timeout 10s
     depends_on: 
       - application
     networks:
