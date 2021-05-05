@@ -21,6 +21,7 @@ services:
       - DB_HOST=mysql
       - DB_PORT=3306
       - DB_DATABASE=module-db
+    entrypoint: dockerize -wait tcp://mysql:3306 -wait java -jar ./app.jar
     networks:
       - database-network
       - proxy-network
@@ -30,6 +31,7 @@ services:
     image: andersonfsilva/web-proxy:latest
     ports: 
       - 8000:80
+    entrypoint: dockerize -wait http://application:3333 -timeout 10s
     depends_on: 
       - application
     networks:
